@@ -8,3 +8,7 @@ def home(request):
 def   contact(request):
       context = {'info':'hello bro'}
       return render(request,'contact.html',context)
+      
+def   hello(request):
+      context = {'mess':'yooo'}
+      return render(request,'hello.html',context)
