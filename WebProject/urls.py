@@ -29,5 +29,6 @@ urlpatterns = [
     url(r'^$',views.home,name='home'),
     url(r'^contact$',views.contact,name='contact'),
     url(r'^hello$',views.hello,name='hello'),
+    url(r'^home_view$',views.home_view,name='home_view'),
 
 ]
