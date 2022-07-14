@@ -30,5 +30,6 @@ urlpatterns = [
     url(r'^contact$',views.contact,name='contact'),
     url(r'^hello$',views.hello,name='hello'),
     url(r'^home_view$',views.home_view,name='home_view'),
-
+    url (r'^profiles$',views.profile,name='profile'),
+    url(r"^updateProfile$" ,views.updateProfile,name='update_profile')
 ]
