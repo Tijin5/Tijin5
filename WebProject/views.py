@@ -1,6 +1,6 @@
 from django.shortcuts import render
-from .forms import InputForm
-
+from .forms import InputForm, TitleProfileForm
+from .models import TitleProfile 
 # Create your views here.
 def home(request):
      context = {'message':'Success'}
@@ -14,15 +14,22 @@ def profile(request):
             return render(request,'profile.html',context)
 
 def updateProfile(request):
-
-
-
-
-
-
-
-
-
+      if request.method=='GET':
+            context = { 'message': 'Success'}
+            formdata = TitleProfile.objects.get(pk=1)
+            context['titleform']=TitleProfileForm(instance=formdata)
+            print(context)
+            return render(request,'profile-edit.html',context)
+      elif request.method=='POST':
+            print('request.POST',request.POST) 
+            newForm= TitleProfileForm(request.POST)
+            if newForm.is_valid():
+                  context={ 'message':'Success'}
+                  newForm.save()
+            formdata = TitleProfile.objects.get(pk=1)
+            context['titleform']=TitleProfileForm(instance=formdata)
+            print(context)
+            return render(request,'profile-edit.html',context)
 
 def   contact(request):
       context = {'info':'hello bro'}

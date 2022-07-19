@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+</head>
+<body>
+<h1>yente mwonne</h1>
+<p> pollikyande? </p>
+<p>{{message}}</p>
+<form action="" methods="post">
+        % csrf_token %
+        <table>
+        {{ titleform.as_table }}    
+        </table>
+        <input type="submit" value="Submit">
+</form>
+</body>
+</html>
