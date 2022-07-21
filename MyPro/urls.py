@@ -26,12 +26,9 @@ from django.conf.urls import include
 
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
     #admin page urls
     path('admin/',admin.site.urls),
     path("accounts/", include("django.contrib.auth.urls")),
-    
-    
     url(r'^',include('WebProject.urls')),
 
 ]

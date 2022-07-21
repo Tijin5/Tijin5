@@ -27,9 +27,11 @@ from WebProject import views
   
 urlpatterns = [
     url(r'^$',views.home,name='home'),
-    url(r'^contact$',views.contact,name='contact'),
-    url(r'^hello$',views.hello,name='hello'),
-    url(r'^home_view$',views.home_view,name='home_view'),
-    url (r'^profiles$',views.profile,name='profile'),
-    url(r"^updateProfile$" ,views.updateProfile,name='update_profile')
+    #url(r'^contact$',views.contact,name='contact'),
+    #url(r'^hello$',views.hello,name='hello'),
+    #url(r'^home_view$',views.home_view,name='home_view'),
+    #url (r'^profiles$',views.profile,name='profile'),
+    #url(r"^updateProfile$",views.updateProfile,name='update_profile'),
+    url(r'^loginhome$',views.loginhome,name='loginhome'),
+    url(r'contact$',views.contact,name='contact'),
 ]

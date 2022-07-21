@@ -5,7 +5,12 @@ from .models import TitleProfile
 def home(request):
      context = {'message':'Success'}
      return render(request, 'index.html', context)     
-    
+def loginhome(request):
+      context = {'message': 'Success'}
+      return render(request,'home.html',context)
+
+
+
 def profile(request):
       if request.method=='GET':
             context = { 'message': 'Success'}
