@@ -8,7 +8,7 @@
 <p> pollikyande? </p>
 <p>{{message}}</p>
 <form action="" methods="post">
-        % csrf_token %
+        {% csrf_token %}
         <table>
         {{ titleform.as_table }}    
         </table>
