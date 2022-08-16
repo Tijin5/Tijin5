@@ -14,15 +14,12 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 
-
-
+from django.urls import path
+from WebProject import views
 try:
     from django.conf.urls import url
 except:
     from  django.urls import re_path as url   
-from django.urls import path
-from WebProject import views
-
 
   
 urlpatterns = [
